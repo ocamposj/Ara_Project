@@ -32,12 +32,12 @@ while True:
 	try:
 
 		humedad, temperatura = DHT11_data()
-		datos = {"Temperatura": temperatura, "Precipitacion": humedad} #le digo que me escriba la temp y humed diccionario
+		datos = {"Temperatura": temperatura, "Humedad": humedad} #le digo que me escriba la temp y humed diccionario
 
-		with open("datos.txt", "w") as archivo:
-			archivo.writelines([str(datos)])
+		with open("datos.json", "w") as archivo: # Escribe el archivo de datos
+			archivo.writelines([str(datos)])	# Escribe el diccionario 'datos'
 
-		print("Humedad:", humedad, "Temperatura", temperatura)
+		print("Humedad", humedad, "Temperatura", temperatura)
 
 		if humedad > 50.0:
 
@@ -61,5 +61,3 @@ while True:
 		print("Programa terminado")
 
 		break
-
-
