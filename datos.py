@@ -32,6 +32,10 @@ while True:
 	try:
 
 		humedad, temperatura = DHT11_data()
+		datos = {"Temperatura": temperatura, "Precipitacion": humedad} #le digo que me escriba la temp y humed diccionario
+
+		with open("datos.txt", "w") as archivo:
+			archivo.writelines([str(datos)])
 
 		print("Humedad:", humedad, "Temperatura", temperatura)
 
@@ -48,6 +52,7 @@ while True:
 			gpio.output(led_g, True)
 
 		sleep(20)
+		
 
 	except KeyboardInterrupt:
 
