@@ -4,7 +4,7 @@ import unicodedata
 from PIL import Image
 from resizeimage import resizeimage 
 
-lista = ["education.jpg", "kidswithcomputer.jpg"]
+lista = ["education.jpg", "kidswithcomputer.jpg", "negri.jpg"]
 
 for titulo in lista:
     with open(titulo, 'r+b') as f:
