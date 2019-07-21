@@ -20,5 +20,4 @@ from Ara_project_web import views
 urlpatterns = [
     path('admin', admin.site.urls),
     path('', views.home),
-    path('data', views.data_from_sensor)
 ]
