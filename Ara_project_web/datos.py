@@ -35,7 +35,7 @@ while True:
 		datos = {"Temperatura": temperatura, "Humedad": humedad} #le digo que me escriba la temp y humed diccionario
 
 		with open("datos.json", "w") as archivo: # Escribe el archivo de datos
-			archivo.writelines([str(datos)])	# Escribe el diccionario 'datos'
+			archivo.writelines([str(datos).replace("'",'"')])	# Escribe el diccionario 'datos'
 
 		print("Humedad", humedad, "Temperatura", temperatura)
 
