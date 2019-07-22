@@ -1,6 +1,9 @@
 import RPi.GPIO as gpio 
 import Adafruit_DHT as dht
 from time import sleep 
+from django.db import models
+import datetime
+import data_sqlite
 
 led_r = 23
 
@@ -24,8 +27,9 @@ led_time = 0.05
 def DHT11_data():
 
 	humi, temp = dht.read_retry(dht.DHT11, 18)
-
-	return humi, temp
+	date_time = datetime.datetime.now()
+	
+	return humi, temp, date_time
 
 while True:
 
@@ -35,9 +39,11 @@ while True:
 		datos = {"Temperatura": temperatura, "Humedad": humedad} #le digo que me escriba la temp y humed diccionario
 
 		with open("datos.json", "w") as archivo: # Escribe el archivo de datos
-			archivo.writelines([str(datos).replace("'",'"')])	# Escribe el diccionario 'datos'
+			archivo.writelines([str(datos)])	# Escribe el diccionario 'datos'
 
 		print("Humedad", humedad, "Temperatura", temperatura)
+
+		data_sqlite.main()
 
 		if humedad > 50.0:
 
@@ -61,3 +67,4 @@ while True:
 		print("Programa terminado")
 
 		break
+
