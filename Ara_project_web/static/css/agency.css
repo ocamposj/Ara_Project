@@ -109,7 +109,7 @@ img::-moz-selection {
 }
 
 #mainNav {
-  background-color: #212529;
+  background-color: #0a3b48;
 }
 
 #mainNav .navbar-toggler {
@@ -370,7 +370,7 @@ header.masthead .intro-text .intro-heading {
   /* IE 9 */
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  background-color: #212529;
+  background-color: #0a3b48;
 }
 
 .portfolio-modal .close-modal .lr .rl {
@@ -381,7 +381,7 @@ header.masthead .intro-text .intro-heading {
   /* IE 9 */
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
-  background-color: #212529;
+  background-color: #0a3b48;
 }
 
 .timeline {
@@ -592,7 +592,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 section#contact {
-  background-color: #212529;
+  background-color: #0a3b48;
   background-image: url("../img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -684,7 +684,7 @@ ul.social-buttons li a {
   color: white;
   border-radius: 100%;
   outline: none;
-  background-color: #212529;
+  background-color: #0a3b48;
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
