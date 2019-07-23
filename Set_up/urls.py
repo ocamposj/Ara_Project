@@ -19,5 +19,6 @@ from Ara_project_web import views
 
 urlpatterns = [
     path('admin', admin.site.urls),
+    path('add-data', views.add_data),
     path('', views.home),
 ]
